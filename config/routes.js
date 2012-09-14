@@ -7,7 +7,6 @@
 // information.
 module.exports = function routes() {
   this.root('pages#main');
-  this.match('test/:name', 'pages#test');
   this.match('times', 'pages#get_times');
   this.match('forecast', 'pages#forecast');
 }
