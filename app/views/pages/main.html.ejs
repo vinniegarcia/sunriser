@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.css" />
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.ie.css" />
+<![endif]-->
+<script src="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.js"></script>
+    <script src="/js/sunriser.js"></script>
+    <script src="/js/sun_errors.js"></script>
+    <script src="/js/sun_forecast.js"></script>
+    <script>
+    	$(document).ready(function ()
+    	{
+    		$('#geobutton').click(function ()
+    			{
+    				var sr = new Sunriser();
+    			});
+    		$('#forecastbutton').click(function ()
+    		{
+    			var forecast = new SunForecast();
+    		});
+    	});
+    </script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Sunrise and Sunset calculator wherever you are.</p>
+    
+    	<a id="geobutton" href="#"><strong>Locate me!</strong></a>
+
+    	<a id="forecastbutton" href="#"><strong>Forecast me!</strong></a>
+
+
+    <div id="location-data">
+    	<table>
+    		<tr>
+    			<td>Current location:</td>
+    			<td id="current_location"></td>
+    		</tr>
+    		<tr>
+    			<td>Latitude:</td>
+    			<td id="latit"></td>
+    		</tr>
+    		<tr>
+    			<td>Longitude</td>
+    			<td id="longit"></td>
+    		</tr>
+    	</table>
+    </div>
+
+    <div id="results">
+
+    	<table>
+    		<tr>
+    			<td>Current time:</td>
+    			<td id="current_time"></td>
+    		</tr>
+    		<tr>
+    			<td>Local sunrise:</td>
+    			<td id="local_sunrise"></td>
+    		</tr>
+    		<tr>
+    			<td>Local Sunset:</td>
+    			<td id="local_sunset"></td>
+    		</tr>
+    		<tr>
+    			<td>Is it daylight there right now?</td>
+    			<td id="local_daylight"></td>
+    		</tr>
+    	</table>
+    </div>
+
+    <div id="forecast">
+    	<table>
+    		<thead>
+    			<tr>
+    				<th>Date</th><th>Local Sunrise Time</th><th>Local Sunset Time</th>
+    			</tr>
+    		</thead>
+    		<tbody>
+
+    		</tbody>
+    	</table>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,25 @@
+@import "http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700";
+
+body {
+  padding: 50px;
+  font: 14px "Source Sans Pro", Calibri, "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#location-data, #forecast, #results {
+	display: none;
+}
+table {
+	border: 1px solid #999;
+	border-collapse: collapse;
+	margin: 20px auto;
+}
+td {
+	padding: 2px 12px;
+	border: 1px solid #999;
+}
+#map { height: 320px; width: 480px;}
